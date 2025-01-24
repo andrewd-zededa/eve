@@ -278,7 +278,7 @@ func maybeDeleteVolume(ctx *volumemgrContext, status *types.VolumeStatus) {
 		return
 	}
 	var readyToUnPublish bool
-	if status.SubState == types.VolumeSubStateCreated {
+	if status.SubState <= types.VolumeSubStateCreated {
 		// we are not interested in result
 		_ = popVolumeWorkResult(ctx, status.Key())
 		status.SubState = types.VolumeSubStateDeleting
