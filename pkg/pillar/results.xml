@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/agentbase" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="12" failures="1" time="12.710000" name="github.com/lf-edge/eve/pkg/pillar/agentlog" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestPsiEveIntegratedStartStopTwice" time="5.240000">
+			<failure message="Failed" type="">=== RUN   TestPsiEveIntegratedStartStopTwice&#xA;    agentlog_test.go:567: &#xA;        &#x9;Error Trace:&#x9;/pillar/agentlog/agentlog_test.go:567&#xA;        &#x9;Error:      &#x9;Not equal: &#xA;        &#x9;            &#x9;expected: 200&#xA;        &#x9;            &#x9;actual  : 404&#xA;        &#x9;Test:       &#x9;TestPsiEveIntegratedStartStopTwice&#xA;    agentlog_test.go:568: &#xA;        &#x9;Error Trace:&#x9;/pillar/agentlog/agentlog_test.go:568&#xA;        &#x9;Error:      &#x9;&#34;Memory PSI collector is not running\n&#34; does not contain &#34;Memory PSI collector stopped&#34;&#xA;        &#x9;Test:       &#x9;TestPsiEveIntegratedStartStopTwice&#xA;--- FAIL: TestPsiEveIntegratedStartStopTwice (5.24s)&#xA;</failure>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestListenDebug" time="0.000000">
+			<skipped message="=== RUN   TestListenDebug&#xA;    http-debug_test.go:89: &#xA;--- SKIP: TestListenDebug (0.00s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestPubsubLog" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestPsiEveIntegratedStartStop" time="2.110000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestPsiEveIntegratedStartTwice" time="0.130000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestPsiEveIntegratedStopUnstarted" time="0.110000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeTruncate" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeTruncateNotTriggered" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeNotProperThreshold" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeNotTruncatedLinesToKeepIsGreaterThanWeHave" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeTruncateButStillTooBig" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/agentlog" name="TestManageStatFileSizeTargetSizesAvgThreshold" time="5.100000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/agentlog/cmd/psi-collector" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="12" failures="0" time="39.230000" name="github.com/lf-edge/eve/pkg/pillar/attest" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestGoodPath" time="11.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestNonceMismatch" time="2.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestQuoteMismatch" time="2.040000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestNoCertInController" time="2.040000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestControllerNotAvbleInNonceWait" time="1.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestControllerNotAvbleInAttestWait" time="1.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestControllerNotAvbleInAttestEscrowWait" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestNoEscrowDataAttestEscrowWait" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestItokenMismatchAttestEscrowWait" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestNoVerifierInNonceWait" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestInternalEscrowRcvdAtAnyOther" time="8.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/attest" name="TestRestartAtEachState" time="8.020000"></testcase>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/base" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/base" name="TestSpecialAgent" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/base" name="TestTimeoutLongerThanLimit" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/canbus" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cas" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cas" name="TestWriteKubevirtMountpointsFile" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cipher" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/baseosmgr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/client" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/command" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/conntrack" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.790000" name="github.com/lf-edge/eve/pkg/pillar/cmd/diag" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/diag" name="TestPrintIfSpace" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/diag" name="TestPrintIfSpaceFile" time="0.790000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.050000" name="github.com/lf-edge/eve/pkg/pillar/cmd/domainmgr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/domainmgr" name="TestFetchEnvVariablesFromCloudInit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/domainmgr" name="TestHandleMimeMultipart" time="0.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/domainmgr" name="TestUsbControllersNoImmediatePCIReserve" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/domainmgr" name="TestConfigEnableUsbUpdatePortAndPciBackIoBundle" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/downloader" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/executor" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/faultinjection" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/hardwaremodel" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/ipcmonitor" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/ledmanager" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/loguploader" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/monitor" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="5" failures="0" time="2.119000" name="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" name="TestTpmActivateCred" time="0.000000">
+			<skipped message="=== RUN   TestTpmActivateCred&#xA;=== PAUSE TestTpmActivateCred&#xA;=== CONT  TestTpmActivateCred&#xA;    activatecred_test.go:38: SWTPM device not available, skipping the test&#xA;--- SKIP: TestTpmActivateCred (0.00s)&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App network status create&#34; activated=false log_event_type=log obj_key=app_network_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_network_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App network status create&#34; activated=false log_event_type=log obj_key=app_network_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_network_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000002 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000002 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000001 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000001 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;DeviceNetworkStatus create&#34; current-index-int64=0 log_event_type=log obj_key=devicenetwork_status-global obj_type=devicenetwork_status pid=1234 ports-int64=1 source=pubsub state= testing-bool=false&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;DeviceNetworkStatus port create&#34; ifname=eth0 last-error= last-failed=&#34;0001-01-01 00:00:00 +0000 UTC&#34; last-succeeded=&#34;0001-01-01 00:00:00 +0000 UTC&#34; last-warning= log_event_type=log obj_key=devicenetwork_status-global obj_type=devicenetwork_status pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App network status create&#34; activated=false log_event_type=log obj_key=app_network_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_network_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;Network instance status create&#34; log_event_type=log obj_key=network_instance_status-00000000-0000-0000-0000-000000000000 obj_type=network_instance_status pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000002 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000002 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;start handlePatchEnvelopeImpl&#34; pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;finish handlePatchEnvelopeImpl&#34; pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000001 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000001 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;Network instance status create&#34; log_event_type=log obj_key=network_instance_status-00000000-0000-0000-0000-000000000000 obj_type=network_instance_status pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App network status create&#34; activated=false log_event_type=log obj_key=app_network_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_network_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 source=pubsub&#xA;time=&#34;2025-02-07T00:46:04Z&#34; level=info msg=&#34;App instance status create&#34; log_event_type=log obj_key=app_instance_status-6ba7b810-9dad-11d1-80b4-000000000000 obj_type=app_instance_status obj_uuid=6ba7b810-9dad-11d1-80b4-000000000000 pid=1234 purge-in-progress=0 restart-in-progress=0 source=pubsub state=&#34;Unknown state 0&#34;&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" name="TestPostKubeconfig" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" name="TestHandleAppInstanceDiscovery" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" name="TestRequestPatchEnvelopes" time="0.080000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/msrv" name="TestPatchEnvelopes" time="2.009000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/nim" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/nodeagent" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/pbuf" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="0.010000" name="github.com/lf-edge/eve/pkg/pillar/cmd/tpmmgr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/tpmmgr" name="TestSoftEcdh" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/tpmmgr" name="TestGetPrivateKeyFromFile" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/tpmmgr" name="TestVerifyEdgeNodeCerts" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="9.320000" name="github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter" name="Test_ConvertGlobalConfig" time="4.360000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter" name="Test_MoveConfigItem" time="4.430000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter" name="Test_ApplyDefaultConfigItem" time="0.370000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter" name="Test_ConvertUUIDPairToNum" time="0.160000"></testcase>
+	</testsuite>
+	<testsuite tests="37" failures="0" time="0.040000" name="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundle2PassthroughRule_AppearingParent" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundle2PassthroughRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundleTree" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestOrphanedIOBundleElem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestGroupDependencies" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundleEmpty" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundlePCIForbidRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundleUSBProductAndUSBAddress" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundlePCIAndUSBProduct" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestIOBundlePCIAndUSBAddress" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestAddIOBundleDeadlock" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestOverwriteRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestBlockedByPCIPassthrough" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestPortOverDevPrecedence" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestUSBWithoutPCICard" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestPluginWrongPCICard" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestAddIOBundle" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestEmptyParentPCIAddress" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestUsbNetworkAdapterForbidPassthroughRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestUsbNetworkAdapterAllowPassthroughRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestExtractPCIAddress" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestUeventFile2usbDeviceImplWithoutPCIAddress" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestAddNonRuleIOBundle" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestRemovingVm" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestNoConnectWrongPCIUSBDevicesToQemu" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestNoConnectUSBDevicesToQemu" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestReconnectUSBDevicesToQemu" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestConnectUSBDevicesToQemu" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestAddIOBundleWithHigherPriority" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestParentassigngrp" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestAddIOBundleWithSeveralPCIControllers" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestSetForbidRuleActive" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="TestExtractUSBPort" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="FuzzIOBundleTree" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="FuzzIOBundle2PassthroughRule" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="FuzzRuleEngine" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/usbmanager" name="FuzzUSBManagerController" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/vaultmgr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/vcomlink" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/verifier" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/verifier/cmd" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/verifier/lib" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/verifier/pubsub" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/verifier/pubsub" name="TestMediaTypeInStatusFromVerifiedFilename" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/verifier/pubsub" name="TestMediaTypeInStatusFromVerifiedFilenameWithNoMediaType" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.820000" name="github.com/lf-edge/eve/pkg/pillar/cmd/volumemgr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/volumemgr" name="TestLookupBlobStatus" time="0.820000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/volumemgr" name="TestIsErrorSourceOnPubSub" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/waitforaddr" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="19" failures="1" time="17.970000" name="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutinesMonitorUpdateParamsKeepStatsDecrease" time="3.240000">
+			<failure message="Failed" type="">=== RUN   TestGoroutinesMonitorUpdateParamsKeepStatsDecrease&#xA;    watcher_test.go:409: Expected log output to contain &#39;Resizing stats slice to 720&#39;&#xA;    watcher_test.go:409: Expected log output to contain &#39;Removing 720 oldest entries&#39;&#xA;Failed to write to log, write |1: file already closed&#xA;--- FAIL: TestGoroutinesMonitorUpdateParamsKeepStatsDecrease (3.24s)&#xA;</failure>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestMovingAverageValidData" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestMovingAverageWindowSizeEqualDataLength" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestMovingAverageEmptyData" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestMovingAverageWindowSizeZero" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestMovingAverageWindowSizeLargerThanDataLength" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineLeakDetectorWithSystemStart" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineLeakDetectorWithLegitSpike" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineLeakDetectorWithDecreaseAfterSpike" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineLeakDetectorWithLeakAfterSpike" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineLeakDetectorWithLeakEachStep" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestEmptyInputData" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestInputDataWithFewerThanTwoElements" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestWindowSizeLargerThanDataLength" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutinesMonitorNoLeak" time="2.940000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutinesMonitorLeak" time="2.910000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutinesMonitorUpdateParamsKeepStatsIncrease" time="2.990000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineMonitorStops" time="2.980000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/watcher" name="TestGoroutineMonitorRunsFineUnstoppable" time="2.900000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/wstunnelclient" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="10" failures="0" time="0.490000" name="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestBiosFieldsHandling" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParsePhysicalNetworkAdapters" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestDPCWithError" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParseVlans" time="0.040000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParseBonds" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParseVlansOverBonds" time="0.060000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestInvalidLowerLayerReferences" time="0.270000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParseSRIOV" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParseSharedLabels" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cmd/zedagent" name="TestParsePatchEnvelope" time="0.090000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/zedkube" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/zedmanager" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/zedrouter" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cmd/zfsmanager" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/conntester" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/conntrack" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="11" failures="0" time="120.090000" name="github.com/lf-edge/eve/pkg/pillar/containerd" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestCreateMountPointExecEnvFiles" time="30.020000">
+			<skipped message="=== RUN   TestCreateMountPointExecEnvFiles&#xA;time=&#34;2025-02-07T00:46:34Z&#34; level=info msg=NewContainerdClient&#xA;time=&#34;2025-02-07T00:47:04Z&#34; level=error msg=&#34;NewContainerdClient: could not create containerd client. failed to dial \&#34;/run/containerd/containerd.sock\&#34;: context deadline exceeded: connection error: desc = \&#34;transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout\&#34;&#34;&#xA;    oci_test.go:818: test must be run on a system with a functional containerd&#xA;--- SKIP: TestCreateMountPointExecEnvFiles (30.02s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestPrepareMount" time="30.020000">
+			<skipped message="=== RUN   TestPrepareMount&#xA;time=&#34;2025-02-07T00:47:04Z&#34; level=info msg=NewContainerdClient&#xA;time=&#34;2025-02-07T00:47:34Z&#34; level=error msg=&#34;NewContainerdClient: could not create containerd client. failed to dial \&#34;/run/containerd/containerd.sock\&#34;: context deadline exceeded: connection error: desc = \&#34;transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout\&#34;&#34;&#xA;    oci_test.go:818: test must be run on a system with a functional containerd&#xA;--- SKIP: TestPrepareMount (30.02s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestAddLoader" time="30.010000">
+			<skipped message="=== RUN   TestAddLoader&#xA;time=&#34;2025-02-07T00:47:34Z&#34; level=info msg=NewContainerdClient&#xA;time=&#34;2025-02-07T00:48:04Z&#34; level=error msg=&#34;NewContainerdClient: could not create containerd client. failed to dial \&#34;/run/containerd/containerd.sock\&#34;: context deadline exceeded: connection error: desc = \&#34;transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout\&#34;&#34;&#xA;    oci_test.go:818: test must be run on a system with a functional containerd&#xA;--- SKIP: TestAddLoader (30.01s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestDenyAllDevicesInSpec" time="30.010000">
+			<skipped message="=== RUN   TestDenyAllDevicesInSpec&#xA;=== PAUSE TestDenyAllDevicesInSpec&#xA;=== CONT  TestDenyAllDevicesInSpec&#xA;time=&#34;2025-02-07T00:48:04Z&#34; level=info msg=NewContainerdClient&#xA;time=&#34;2025-02-07T00:48:34Z&#34; level=error msg=&#34;NewContainerdClient: could not create containerd client. failed to dial \&#34;/run/containerd/containerd.sock\&#34;: context deadline exceeded: connection error: desc = \&#34;transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout\&#34;&#34;&#xA;    oci_test.go:818: test must be run on a system with a functional containerd&#xA;--- SKIP: TestDenyAllDevicesInSpec (30.01s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestSaveSnapshotID/TestSaveSnapshotID1" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestSaveSnapshotID" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestGetSnapshotID/TestGetSnapshotID1" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestGetSnapshotID" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestOciSpec" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestUpdateMounts" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/containerd" name="TestEnvs" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/cpuallocator" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cpuallocator" name="TestInit/init_good" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cpuallocator" name="TestInit/init_bad" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cpuallocator" name="TestInit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/cpuallocator" name="TestAllocate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="6" failures="0" time="35.490000" name="github.com/lf-edge/eve/pkg/pillar/devicenetwork" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="TestResolveWithPortsLambda" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="TestResolveWithPortsLambdaWithErrors" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="TestDnsResolve" time="0.420000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="TestResolveCacheWrap" time="5.030000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="TestDnsResolveTimeout" time="30.040000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/devicenetwork" name="FuzzResolveWithSrcIP" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/diskmetrics" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/diskmetrics" name="TestStatAllocatedBytes" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="13" failures="0" time="122.650000" name="github.com/lf-edge/eve/pkg/pillar/dpcmanager" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestCompressDPCL" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestSingleDPC" time="20.940000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDPCFallback" time="27.140000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDPCWithMultipleEths" time="12.740000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDNS" time="4.370000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestWireless" time="6.420000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestAddDPCDuringVerify" time="3.540000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDPCWithAssignedInterface" time="6.580000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDeleteDPC" time="4.560000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestDPCWithReleasedAndRenamedInterface" time="14.840000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestVlansAndBonds" time="6.650000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestTransientDNSError" time="12.570000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcmanager" name="TestOldDPC" time="2.290000"></testcase>
+	</testsuite>
+	<testsuite tests="5" failures="0" time="0.450000" name="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" name="TestReconcileWithEmptyArgs" time="0.080000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" name="TestSingleEthInterface" time="0.100000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" name="TestMultipleEthsSameSubnet" time="0.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" name="TestWireless" time="0.100000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler" name="TestVlansAndBonds" time="0.120000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/dpcreconciler/genericitems" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/dpcreconciler/genericitems" name="TestDhcpcdEqual" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/dpcreconciler/linuxitems" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/evetpm" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/execlib" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/flextimer" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/hardware" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hardware" name="TestCompatible" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="21" failures="0" time="31.340000" name="github.com/lf-edge/eve/pkg/pillar/hypervisor" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestGetDomsCPUMem" time="30.120000">
+			<skipped message="=== RUN   TestGetDomsCPUMem&#xA;time=&#34;2025-02-07T00:47:01Z&#34; level=info msg=NewContainerdClient&#xA;time=&#34;2025-02-07T00:47:32Z&#34; level=error msg=&#34;NewContainerdClient: could not create containerd client. failed to dial \&#34;/run/containerd/containerd.sock\&#34;: context deadline exceeded: connection error: desc = \&#34;transport: error while dialing: dial unix:///run/containerd/containerd.sock: timeout\&#34;&#34;&#xA;    containerd_test.go:13: test must be run on a system with a functional containerd&#xA;--- SKIP: TestGetDomsCPUMem (30.12s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestBootTimeHypervisorWithHVFilePath" time="0.010000">
+			<skipped message="=== RUN   TestBootTimeHypervisorWithHVFilePath&#xA;    hypervisor_test.go:48: enable this test once calling containerd in the test environment does not panic anymore&#xA;--- SKIP: TestBootTimeHypervisorWithHVFilePath (0.01s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestGetHypervisor" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestGetAvailableHypervisors" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateReplicaPodConfig" time="0.520000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigOnlyCom1/amd64" time="0.100000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigOnlyCom1/amd64-fml" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigOnlyCom1/arm64" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigOnlyCom1" time="0.130000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDom" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestPCIAssignmentsTemplateFillMultifunctionDevice" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestConvertToMultifunctionPCIDevices" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestPCIAddressAllocator" time="0.030000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestNullCreate" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestPCIAssignments" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestBasicNullDomainWorkflow" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigAmd64Fml" time="0.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigContainerVNC" time="0.060000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigAmd64" time="0.070000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigArm64" time="0.070000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/hypervisor" name="TestCreateDomConfigAmd64Legacy" time="0.070000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/iptables" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/kubeapi" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/kubeapi" name="TestLonghornGetMajorMinorMaps" time="0.000000">
+			<skipped message="=== RUN   TestLonghornGetMajorMinorMaps&#xA;    storageutils_test.go:15: No local longhorn&#xA;--- SKIP: TestLonghornGetMajorMinorMaps (0.00s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/kubeapi" name="TestPvPvcMaps" time="0.000000">
+			<skipped message="=== RUN   TestPvPvcMaps&#xA;    storageutils_test.go:50: No local kube or longhorn&#xA;--- SKIP: TestPvPvcMaps (0.00s)&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/kubeapi" name="TestSCSIGetMajMinMaps" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/netclone" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/netdump" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/netmonitor" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="21" failures="0" time="14.810000" name="github.com/lf-edge/eve/pkg/pillar/nireconciler" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/short_hostname" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/short_hostname_ending_with_&#39;.&#39;" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/short_TLD" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/short_TLD_ending_with_&#39;.&#39;" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/hostname_just_at_the_length_limit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/very_long_hostname" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/very_long_hostname_ending_with_&#39;.&#39;" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/very_long_TLD" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/very_long_TLD_ending_with_&#39;.&#39;" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/hostname_one_character_above_the_length_limit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename/empty_hostname" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostIpsetBasename" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestSingleLocalNI" time="11.070000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestIPv4LocalAndSwitchNIs" time="0.590000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestIPv4LocalAndSwitchNIsWithFlowlogging" time="0.750000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestIPv6LocalAndSwitchNIs" time="0.310000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestAirGappedLocalAndSwitchNIs" time="0.270000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestStaticAndConnectedRoutes" time="0.460000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestCNI" time="0.130000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestHostSysctl" time="0.900000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler" name="TestSwitchNIWithMultiplePorts" time="0.330000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/nireconciler/genericitems" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler/genericitems" name="TestCreateDnsmasqConfigWithDhcpRangeEnd" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler/genericitems" name="TestRunDnsmasqInvalidDhcpRange" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler/genericitems" name="TestCreateDnsmasqConfigWithoutGateway" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/nireconciler/genericitems" name="TestCreateDnsmasqConfigWithoutDhcpRangeEnd" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/nireconciler/linuxitems" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/nistate" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="7" failures="0" time="1.820000" name="github.com/lf-edge/eve/pkg/pillar/objtonum" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestAllocStrategies" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestPublishedMap" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestMultipleMapsSinglePublisher" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestAllocatorGC" time="0.240000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestReusedOldestReserved" time="0.240000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestAllocator" time="0.290000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/objtonum" name="TestAllocatorRestart" time="1.030000"></testcase>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="0.450000" name="github.com/lf-edge/eve/pkg/pillar/persistcache" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/persistcache" name="TestPut" time="0.150000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/persistcache" name="TestDelete" time="0.150000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/persistcache" name="TestLoad" time="0.150000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/pidfile" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="6" failures="0" time="185.080000" name="github.com/lf-edge/eve/pkg/pillar/portprober" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestProbingSingleRoute" time="66.070000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestProbingMultipleRoutes" time="62.750000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestProbingNoConnectivity" time="18.920000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestPortCostChange" time="11.620000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestAvoidStateFlapping" time="11.240000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/portprober" name="TestDisappearedPort" time="14.480000"></testcase>
+	</testsuite>
+	<testsuite tests="26" failures="0" time="44.340000" name="github.com/lf-edge/eve/pkg/pillar/pubsub" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRemoveAndAddLarge" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRemoveAndAddLargeWithArray" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestHandleModify" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_small_enough" time="0.040000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_too_large" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_with_persistent_too_large" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/File_too_large_using_large_tag" time="2.320000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_too_large_using_large_tag" time="0.140000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/File_small_enough" time="2.400000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_with_persistent_small_enough" time="0.070000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/File_too_large" time="2.560000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/File_using_large_tag" time="2.050000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_using_large_tag" time="0.620000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_with_persistent_using_large_tag" time="1.170000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize/IPC_with_persistent_too_large_using_large_tag" time="0.150000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestCheckMaxSize" time="11.580000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRestarted/IPC" time="0.060000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRestarted/IPC_with_persistent" time="0.060000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRestarted/File" time="5.740000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestRestarted" time="5.890000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestUnsubscribe/IPC" time="1.030000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestUnsubscribe/IPC_with_persistent" time="1.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestUnsubscribe/File" time="2.670000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestUnsubscribe" time="4.720000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestDeepCopyIoBundlError" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub" name="TestMemoryDriverPubSub" time="0.010000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/pubsub/legacy" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/pubsub/reverse" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.020000" name="github.com/lf-edge/eve/pkg/pillar/pubsub/socketdriver" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/pubsub/socketdriver" name="TestRecovery" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="6" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/queuelock" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestExtraExit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestBadExit" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestOne" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestTwo" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestThree" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/queuelock" name="TestThreeDuplicate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/rstats" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/sema" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/sriov" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/ssh" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/tgt" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="53" failures="0" time="0.010000" name="github.com/lf-edge/eve/pkg/pillar/types" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestLookupIoBundleGroup" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestLookupIoBundlePhylabel" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIoBundleFromPhyAdapter" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCheckBadAssignmentGroups" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestExpandControllers" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIoBundleError" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIoBundleCmpable" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIoBundleErrorRemove" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsErrorSource" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestDefaultValue" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestAddIntItem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestAddBoolItem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestAddTriStateItem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestAddStringItem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestNewConfigItemSpecMap" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestParseGlobalItem" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestParseAgentItem" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestAgentSettingStringValue" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGlobalValue" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestDelAgentValue" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestSetGlobalValue" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestPciLongExists" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestDeriveLedCounter" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestParseTriState" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsIPv6" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsNetworkUsed" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsDPCUsable" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsDPCTestable" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestIsDPCUntested" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestWasDPCWorking" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestLookupPortByIfName" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetPortCostList" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetMgmtPortsSortedCost" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetMgmtPortsByCost" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCountLocalAddrAnyNoLinkLocal" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCountLocalAddrAnyNoLinkLocalIf" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCountLocalAddrNoLinkLocalWithCost" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCountLocalIPv4AddrAnyNoLinkLocal" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCountLocalIPv4AddrAnyNoLinkLocalIf" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetLocalAddrAnyNoLinkLocal" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetLocalAddrAnyNoLinkLocal_Interface" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetLocalAddrNoLinkLocalWithCost" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetLocalAddrNoLinkLocalWithCost_Interface" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetLocalAddrList" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCheckBadParentAssigngrp" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestFindPatchEnvelopeById" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestPatchEnvelopeInfoList" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestGetAppNetAdapterConfig" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCheckBadParentAssigngrpLoop" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestCheckBadUSBBundles" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestClearingUSBCollision" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="TestClearingCycleErrors" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/types" name="FuzzCheckBadUSBBundles" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="0.010000" name="github.com/lf-edge/eve/pkg/pillar/utils" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils" name="TestDeserializeToStruct" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils" name="TestMaybeInsertSha" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils" name="TestGetZipArchive" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="10" failures="0" time="0.170000" name="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/invalid_permissions" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/unsupported_encoding_type" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/empty_content" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/invalid_path" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/empty_path" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/single_file" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/gzip_encoding" time="0.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/multiple_files" time="0.020000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig/max_size_limit" time="0.130000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/cloudconfig" name="TestCloudConfig" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/disks" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/file" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/generics" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/generics" name="TestLockedMap" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/generics" name="TestLockedMapAsyncWriteRead" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/logging" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/netutils" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/persist" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/utils/wait" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.020000" name="github.com/lf-edge/eve/pkg/pillar/utils/zfs" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/utils/zfs" name="TestNVMEIsUsed" time="0.020000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/vault" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/vcom" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/volumehandlers" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/watch" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="12" failures="0" time="99.169000" name="github.com/lf-edge/eve/pkg/pillar/worker" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestWork/output_+_sleep" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestWork/output_+_error" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestWork/output_+_sleep_+_error" time="1.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestWork/output" time="0.000000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestWork" time="2.009000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestLength" time="3.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestInOrder" time="5.090000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestNoLimit" time="6.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestNoblocking" time="6.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestGC" time="22.010000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="TestNoGC" time="53.030000"></testcase>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/worker" name="Example_workerprocess" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.010000" name="github.com/lf-edge/eve/pkg/pillar/zboot" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/zboot" name="TestExecWithRetry" time="0.010000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/zedbox" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/zedcloud" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="13.250000" name="github.com/lf-edge/eve/pkg/pillar/zedpac" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/lf-edge/eve/pkg/pillar/zedpac" name="TestPac" time="13.250000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/lf-edge/eve/pkg/pillar/zfs" timestamp="2025-02-07T00:44:30Z">
+		<properties>
+			<property name="go.version" value="go1.20.1 linux/arm64"></property>
+		</properties>
+	</testsuite>
+</testsuites>
