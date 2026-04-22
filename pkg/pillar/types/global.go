@@ -286,6 +286,10 @@ const (
 	// (if enabled by WwanModemRecoveryWatchdog) and can be combined with driver reload recovery
 	// mechanism (see WwanModemRecoveryReloadDrivers).
 	WwanModemRecoveryRestartModemManager GlobalSettingKey = "wwan.modem.recovery.restart.modemmanager"
+	// KubernetesVmiDescheduleEvents : Comma-separated list of events that trigger VMI
+	// descheduling. Currently only "boot" is supported. When empty (default), no
+	// event-driven descheduling is performed.
+	KubernetesVmiDescheduleEvents GlobalSettingKey = "kubernetes.vmi.deschedule.events"
 
 	// GoroutineLeakDetectionThreshold amount of goroutines, reaching which will trigger leak detection
 	// regardless of growth rate.
@@ -1136,7 +1140,6 @@ func NewConfigItemSpecMap() ConfigItemSpecMap {
 	configItemSpecMap.AddBoolItem(NetworkLocalLegacyMACAddress, false)
 	configItemSpecMap.AddBoolItem(MemoryMonitorEnabled, false)
 	configItemSpecMap.AddBoolItem(DHCPEnableVendorClassID, true)
-
 	// Add TriState Items
 	configItemSpecMap.AddTriStateItem(NetworkFallbackAnyEth, TS_DISABLED)
 	configItemSpecMap.AddTriStateItem(MaintenanceMode, TS_NONE)
@@ -1191,6 +1194,7 @@ func NewConfigItemSpecMap() ConfigItemSpecMap {
 	//K3s Settings
 	configItemSpecMap.AddStringItem(K3sConfigOverride, "", base64Validator)
 	configItemSpecMap.AddStringItem(K3sVersionOverride, "", k3sVersionValidator)
+	configItemSpecMap.AddStringItem(KubernetesVmiDescheduleEvents, "", blankValidator)
 
 	// SCEP settings
 	configItemSpecMap.AddIntItem(SCEPRetryInterval, 5*MinuteInSec, MinuteInSec, HourInSec)
